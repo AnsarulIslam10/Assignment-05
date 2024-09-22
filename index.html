@@ -22,6 +22,7 @@
                 clifford: '#da373d',
                 primary: '#B4F461',
                 navColor: '#F9F7F3',
+                secondary: '#111111B3',
               },
               fontFamily: {
                 lexend: 'Lexend'
@@ -34,7 +35,23 @@
 </head>
 
 <body class="font-lexend">
-    
+    <header class="bg-navColor sticky">
+        <nav class="w-11/12 m-auto pt-6 pb-16">
+            <div class="navbar">
+                <div class="navbar-start">
+                  <button class="btn bg-primary font-bold rounded-lg px-8 text-xl">Blog</button>
+                </div>
+                <div class="navbar-center lg:flex gap-4">
+                  <img src="assets/logo.png" alt="">
+                  <h1 class="text-xl font-semibold">Donate Bangladesh</h1>
+                </div>
+                <div class="navbar-end flex items-center gap-1">
+                  <img src="assets/coin.png" alt="">
+                  <h2 class="text-secondary text-xl font-medium"><span>5500</span> BDT</h2>
+                </div>
+              </div>
+        </nav>
+    </header>
 </body>
 
 </html>
