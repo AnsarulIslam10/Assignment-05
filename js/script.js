@@ -46,7 +46,7 @@ function historyCard(inputId, titleId){
     
     <div class="p-8 border border-gray-200 rounded-3xl mb-3">
         <h2 class="text-xl font-bold mb-2">${inputValue} Taka is ${title}</h2>
-        <span class="text-secondary">date and time</span>
+        <span class="text-secondary">${new Date()}</span>
     </div>
     
     `
