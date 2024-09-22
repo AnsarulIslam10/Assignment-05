@@ -15,7 +15,7 @@
 // }
 
 // donateNow('donateBtn-1');
-// donateNow('donateBtn-2');
+// donateNow('donateBtn-2');how 
 // donateNow('donateBtn-3');
 
 // reusable function 1
@@ -104,3 +104,13 @@ document.getElementById('donationBtn').addEventListener('click', function(){
 // document.getElementById('donateBtn-3').addEventListener('click', function () {
     
 // })
+
+
+// blog
+function goToBlogPage(){
+    window.location.href = './blog.html';
+}
+function goToHomePage(){
+    window.location.href = './index.html';
+}
+
