@@ -1,6 +1,5 @@
 // reusable function 1 --> calculating donation
 function donateNow(inputId, donationCountId, balanceId){
-    document.getElementById('my_modal_1').classList.add('hidden');
     const inputValue = parseFloat(document.getElementById(inputId).value);
     const donationCount = parseFloat(document.getElementById(donationCountId).innerText);
     const balance = parseFloat(document.getElementById(balanceId).innerText);
