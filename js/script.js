@@ -1,6 +1,4 @@
-
-
-// reusable function 1 --> calculating donation
+// reusable function 1 --> calculating donation and calling the history function
 function donateNow(inputId, donationCountId, balanceId, titleId) {
     const inputValue = parseFloat(document.getElementById(inputId).value);
     const donationCount = parseFloat(document.getElementById(donationCountId).innerText);
@@ -15,6 +13,7 @@ function donateNow(inputId, donationCountId, balanceId, titleId) {
         document.getElementById(donationCountId).innerText = donationCount + inputValue;
         document.getElementById(balanceId).innerText = balance - inputValue;
         document.getElementById('my_modal_1').classList.remove('hidden');
+
         historyCard(inputId, titleId);
     }
 }
@@ -23,15 +22,14 @@ function donateNow(inputId, donationCountId, balanceId, titleId) {
 function historyCard(inputId, titleId) {
     const inputValue = parseFloat(document.getElementById(inputId).value);
     const title = document.getElementById(titleId).innerText;
-    
+
     const historyList = document.getElementById('history-list');
-        historyList.innerHTML += `
+    historyList.innerHTML += `
     <div class="p-8 border border-gray-200 rounded-3xl mb-3">
         <h2 class="text-xl font-bold mb-2">${inputValue} Taka is ${title}</h2>
         <span class="text-secondary">${new Date()}</span>
-    </div>
-    
-    `  
+    </div>   
+    `
 }
 
 document.getElementById('donateBtn-1').addEventListener('click', function () {
