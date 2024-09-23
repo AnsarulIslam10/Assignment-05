@@ -1,7 +1,7 @@
-const accountBalance = parseFloat(document.getElementById('balance').innerText);
+
 
 // reusable function 1 --> calculating donation
-function donateNow(inputId, donationCountId, balanceId) {
+function donateNow(inputId, donationCountId, balanceId, titleId) {
     const inputValue = parseFloat(document.getElementById(inputId).value);
     const donationCount = parseFloat(document.getElementById(donationCountId).innerText);
     const balance = parseFloat(document.getElementById(balanceId).innerText);
@@ -15,6 +15,7 @@ function donateNow(inputId, donationCountId, balanceId) {
         document.getElementById(donationCountId).innerText = donationCount + inputValue;
         document.getElementById(balanceId).innerText = balance - inputValue;
         document.getElementById('my_modal_1').classList.remove('hidden');
+        historyCard(inputId, titleId);
     }
 }
 
@@ -22,36 +23,27 @@ function donateNow(inputId, donationCountId, balanceId) {
 function historyCard(inputId, titleId) {
     const inputValue = parseFloat(document.getElementById(inputId).value);
     const title = document.getElementById(titleId).innerText;
+    
     const historyList = document.getElementById('history-list');
-
-    if (inputValue > accountBalance || isNaN(inputValue) || inputValue < 0) {
-        return;
-    }
-
-
-    historyList.innerHTML += `
+        historyList.innerHTML += `
     <div class="p-8 border border-gray-200 rounded-3xl mb-3">
         <h2 class="text-xl font-bold mb-2">${inputValue} Taka is ${title}</h2>
         <span class="text-secondary">${new Date()}</span>
     </div>
     
-    `
-
+    `  
 }
 
 document.getElementById('donateBtn-1').addEventListener('click', function () {
-    donateNow('input-1', 'donationCount-1', 'balance');
-    historyCard('input-1', 'title-1');
+    donateNow('input-1', 'donationCount-1', 'balance', 'title-1');
 })
 
 document.getElementById('donateBtn-2').addEventListener('click', function () {
-    donateNow('input-2', 'donationCount-2', 'balance');
-    historyCard('input-2', 'title-2');
+    donateNow('input-2', 'donationCount-2', 'balance', 'title-2');
 })
 
 document.getElementById('donateBtn-3').addEventListener('click', function () {
-    donateNow('input-3', 'donationCount-3', 'balance');
-    historyCard('input-3', 'title-3');
+    donateNow('input-3', 'donationCount-3', 'balance', 'title-3');
 })
 
 // toggle between donation and history
