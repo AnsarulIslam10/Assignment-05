@@ -1,31 +1,11 @@
-
-// common function
-// function inputValue(id){
-//     const input = parseFloat(document.getElementById(id).value);
-//     document.getElementById('donationCount-1').innerText =  input;
-//     console.log('hello')
-// }
-
-// function donateNow(id) {
-//     document.getElementById(id).addEventListener('click', function () {
-//         const balance = parseFloat(document.getElementById('balance').innerText);
-//         inputValue('input-1');
-
-//     })
-// }
-
-// donateNow('donateBtn-1');
-// donateNow('donateBtn-2');how 
-// donateNow('donateBtn-3');
-
-// reusable function 1
+// reusable function 1 --> calculating donation
 function donateNow(inputId, donationCountId, balanceId){
     document.getElementById('my_modal_1').classList.add('hidden');
     const inputValue = parseFloat(document.getElementById(inputId).value);
     const donationCount = parseFloat(document.getElementById(donationCountId).innerText);
     const balance = parseFloat(document.getElementById(balanceId).innerText);
     if (isNaN(inputValue) || inputValue < 0 || inputValue > balance) {
-        alert('Invalid Input');
+        alert('Invalid Amount');
         window.location.reload();
         return;
     }else{
@@ -36,7 +16,7 @@ function donateNow(inputId, donationCountId, balanceId){
     }
 }
 
-// reusable function 2
+// reusable function 2 --> history section
 function historyCard(inputId, titleId){
     const inputValue = parseFloat(document.getElementById(inputId).value);
     const title = document.getElementById(titleId).innerText;
@@ -53,20 +33,6 @@ function historyCard(inputId, titleId){
 }
 
 document.getElementById('donateBtn-1').addEventListener('click', function () {
-    // document.getElementById('my_modal_1').classList.add('hidden');
-    // const inputValue = parseFloat(document.getElementById('input-1').value);
-    // const donationCount = parseFloat(document.getElementById('donationCount-1').innerText);
-    // const balance = parseFloat(document.getElementById('balance').innerText);
-    // if (isNaN(inputValue) || inputValue < 0 || inputValue > balance) {
-    //     alert('Invalid Input');
-    //     window.location.reload();
-    //     return;
-    // }else{
-
-    //     document.getElementById('donationCount-1').innerText =donationCount + inputValue;
-    //     document.getElementById('balance').innerText = balance - inputValue;
-    //     document.getElementById('my_modal_1').classList.remove('hidden');
-    // }
     donateNow('input-1', 'donationCount-1', 'balance')
     historyCard('input-1', 'title-1')
 })
@@ -81,7 +47,7 @@ document.getElementById('donateBtn-3').addEventListener('click', function() {
     historyCard('input-3', 'title-3')
 })
 
-// switching between donation and history
+// toggle between donation and history
 document.getElementById('historyBtn').addEventListener('click', function(){
     document.getElementById('historyBtn').classList.add('bg-primary');
     document.getElementById('donationBtn').classList.remove('bg-primary');
@@ -98,15 +64,7 @@ document.getElementById('donationBtn').addEventListener('click', function(){
 })
 
 
-// document.getElementById('donateBtn-2').addEventListener('click', function () {
-    
-// })
-// document.getElementById('donateBtn-3').addEventListener('click', function () {
-    
-// })
-
-
-// blog
+// page switching function
 function goToBlogPage(){
     window.location.href = './blog.html';
 }

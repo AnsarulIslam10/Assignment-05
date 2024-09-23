@@ -54,7 +54,7 @@
     </header>
 
     <main class="w-11/12 m-auto flex-1 mt-12">
-        <h2 class="text-5xl font-bold mb-8">Important FAQ</h2>
+        <h2 class="text-4xl sm:text-5xl font-bold mb-8">Important FAQ</h2>
         <div class="collapse collapse-arrow bg-base-200 rounded-none p-4">
             <input type="radio" name="my-accordion-2" checked="checked" />
             <div class="collapse-title text-2xl font-medium">What is the Document Object Model (DOM)?</div>
@@ -66,7 +66,7 @@
             <input type="radio" name="my-accordion-2" />
             <div class="collapse-title text-2xl font-medium">How do you select an element from the DOM?</div>
             <div class="collapse-content">
-              <p class="text-lg font-semibold mb-2">We can select an element from DOM using DOM element selectors. there are 5 methods to select an element.
+              <p class="text-lg font-medium mb-2">We can select an element from DOM using DOM element selectors. there are 5 methods to select an element.
                 <p>▶ getElementById</p>
                 <p>▶ getElementsByClassName</p>
                 <p>▶ getElementsByTagName</p>
@@ -79,19 +79,20 @@
             <input type="radio" name="my-accordion-2" />
             <div class="collapse-title text-2xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
             <div class="collapse-content">
-              <p>hello</p>
+              <p>Event delegation primarily works based on the event bubbling mechanism. It is a technique that handles JavaScript DOM events.
+              Event delegation is useful because it improves the performance and handles elements dynamically.</p>
             </div>
           </div>
           <div class="collapse collapse-arrow bg-base-200 rounded-none p-4">
             <input type="radio" name="my-accordion-2" />
             <div class="collapse-title text-2xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
             <div class="collapse-content">
-              <p>hello</p>
+              <p>We can manipulate an element's attributes using setAttribute() and removeAttribute() methods. We can also use the classList add or remove method to add or remove any class from an element. And we can style an element using <span class="font-medium italic">element.style.propertyName = 'value';</span> this syntax.</p>
             </div>
           </div>
     </main>
 
-    <footer class="h-36 bg-navColor"></footer>
+    <footer class="h-36 bg-navColor mt-24"></footer>
     </footer>
 
     <script src="./js/script.js"></script>
