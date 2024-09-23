@@ -34,7 +34,7 @@
 
 </head>
 
-<body class="font-lexend">
+<body class="font-lexend flex flex-col min-h-screen">
     <header class="bg-navColor z-10 sticky top-0">
         <nav class="w-11/12 m-auto pt-6 pb-16 ">
             <div class="navbar">
@@ -43,7 +43,7 @@
                 </div>
                 <div class="navbar-center lg:flex gap-4">
                     <img src="assets/logo.png" alt="">
-                    <h1 class="text-xl font-semibold">Donate Bangladesh</h1>
+                    <h1 class="text-xl font-semibold hidden md:block">Donate Bangladesh</h1>
                 </div>
                 <div class="navbar-end flex items-center gap-1">
                     <img src="assets/coin.png" alt="">
@@ -53,20 +53,20 @@
         </nav>
     </header>
 
-    <main class="w-11/12 m-auto mt-14">
+    <main class="w-11/12 m-auto flex-1 mt-12">
         <h2 class="text-5xl font-bold mb-8">Important FAQ</h2>
         <div class="collapse collapse-arrow bg-base-200 rounded-none p-4">
             <input type="radio" name="my-accordion-2" checked="checked" />
             <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
             <div class="collapse-content">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit et consectetur mollitia iste. Itaque quo quae obcaecati tempore ea? Rerum harum nemo ratione consectetur modi? Repellat reprehenderit corporis dolorem accusamus dolore sed consectetur eaque sapiente. Cumque id in earum assumenda!</p>
+              <p>DOM is an object model that represents an HTML as a tree of objects. With DOM, we can easily access and manipulate html content and add various functionalities and styles. DOM is necessary for building a dynamic website</p>
             </div>
           </div>
           <div class="collapse collapse-arrow bg-base-200 rounded-none p-4">
             <input type="radio" name="my-accordion-2" />
             <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
             <div class="collapse-content">
-              <p>hello</p>
+              <p></p>
             </div>
           </div>
           <div class="collapse collapse-arrow bg-base-200 rounded-none p-4">
@@ -84,6 +84,9 @@
             </div>
           </div>
     </main>
+
+    <footer class="h-36 bg-navColor"></footer>
+    </footer>
 
     <script src="./js/script.js"></script>
 
