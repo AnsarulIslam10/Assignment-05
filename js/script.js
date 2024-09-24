@@ -3,7 +3,7 @@ function donateNow(inputId, donationCountId, balanceId, titleId) {
     const inputValue = parseFloat(document.getElementById(inputId).value);
     const donationCount = parseFloat(document.getElementById(donationCountId).innerText);
     const balance = parseFloat(document.getElementById(balanceId).innerText);
-    if (isNaN(inputValue) || inputValue < 0 || inputValue > balance) {
+    if (isNaN(inputValue) || inputValue <= 0 || inputValue > balance) {
         alert('Invalid Amount');
         const modal = document.getElementById('my_modal_1');
         modal.close();
